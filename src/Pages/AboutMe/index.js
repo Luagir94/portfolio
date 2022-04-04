@@ -37,7 +37,7 @@ const AboutMe = () => {
 
             <h2>Bienvenidxs! Me llamo Luciano Giraudi, me dicen Lucho, tengo {myAge} años.</h2>
 
-              <p >
+            <p >
               Apasionado por el gaming, comics, el manga y anime entre otros.
               <br />
               Siempre estuve interesado por la informatica, decidí encaminarme en el mundo de la programacion arrancando mi camino
