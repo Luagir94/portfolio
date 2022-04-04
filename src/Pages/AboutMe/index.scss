@@ -1,0 +1,620 @@
+.aboutMe {
+  width: 100%;
+  height: 92%;
+  display: flex;
+  overflow: hidden;
+
+  &__info {
+    padding: 10rem;
+    width: 50%;
+    height: 100%;
+    background-color: #F05454;
+    color: #121212;
+
+    &-text {
+      h1 {
+        text-align: left;
+        font-weight: 900;
+        font-size: 3rem;
+      }
+
+      p {
+        text-align: justify;
+        font-weight: 400;
+      }
+    }
+  }
+
+  &__pic {
+    width: 50%;
+    height: 100%;
+    background: #22262b;
+
+    img {
+      height: 100%;
+      filter: grayscale(100%);
+    }
+  }
+}
+
+
+
+
+.all {
+  display: flex;
+  perspective: 10px;
+  transform: perspective(300px) rotateX(20deg);
+  will-change: perspective;
+  perspective-origin: center center;
+  transition: all 1.3s ease-out;
+  justify-content: center;
+  transform-style: preserve-3d;
+  margin-top: 3rem;
+}
+
+.all:hover {
+  perspective: 1000px;
+  transition: all 1.3s ease-in;
+  transform: perspective(10000px) rotateX(0deg);
+
+  .text {
+    opacity: 1;
+  }
+
+  &>div {
+    opacity: 1;
+    transition-delay: 0s;
+  }
+
+  .explainer {
+    opacity: 0;
+  }
+}
+
+.left,
+.center,
+.right,
+.lefter,
+.righter {
+  width: 150px;
+  height: 150px;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  box-shadow: 0 0 20px 5px rgba(245, 245, 245, .4);
+  opacity: 0;
+  transition: all .3s ease;
+  transition-delay: 1s;
+  position: relative;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #121212;
+  cursor: pointer;
+  background-blend-mode: color-burn;
+
+  &:hover {
+    // box-shadow: 0 0 30px 10px rgba(245, 245, 245, .1);
+    background-color: rgba(245, 245, 245, .1);
+  }
+}
+
+.text {
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all .3s ease;
+  bottom: 0;
+  left: 5px;
+  position: absolute;
+  will-change: transform;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(245, 245, 245, .6)
+}
+
+.lefter {
+  transform: translateX(-60px) translateZ(-50px) rotateY(-10deg);
+  background-image: url(../../Assets/gmpLogo.png);
+
+}
+
+.left {
+  transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
+
+  background-image: url(../../Assets/gcpLogo.png);
+}
+
+.center {
+  opacity: 1;
+  background-image: url(../../Assets/reactLogo.png);
+}
+
+.right {
+  transform: translateX(30px) translateZ(-25px) rotateY(5deg);
+  background-image: url(../../Assets/nodeLogo.png);
+}
+
+.righter {
+  transform: translateX(60px) translateZ(-50px) rotateY(10deg);
+  background-image: url(../../Assets/pythonLogo.png);
+}
+
+.explainer {
+  font-weight: 300;
+  font-size: 2rem;
+  color: #fff;
+  transition: all .6s ease;
+  width: 100%;
+  height: 100%;
+  background-color: #303050;
+  background-image: radial-gradient(circle at center top, #F5F5F5, #121212);
+  border-radius: 10px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, .8);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.ref {
+  background-color: #000;
+  background-image: linear-gradient(to bottom, #d80, #c00);
+  border-radius: 3px;
+  padding: 7px 10px;
+  position: absolute;
+  font-size: 16px;
+  bottom: 10px;
+  right: 10px;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 0 3px rgba(0, 0, 0, .4);
+
+  &::first-letter {
+    font-size: 12px;
+  }
+}
+
+
+@media (max-width: 1361px) {
+
+  .aboutMe {
+    width: 100%;
+    height: 92%;
+    display: flex;
+    overflow: hidden;
+
+    &__info {
+      padding: 3rem;
+      height: 100%;
+      background-color: #F05454;
+      color: #121212;
+
+      &-text {
+        h1 {
+          text-align: left;
+          font-weight: 900;
+          font-size: 3rem;
+        }
+
+        p {
+          text-align: justify;
+          font-weight: 400;
+          font-size: 1rem;
+        }
+      }
+    }
+
+    &__pic {
+      width: 50%;
+      height: 100%;
+      background: #22262b;
+      position: relative;
+
+      div {
+        height: 100%;
+        width: 100%;
+        position: relative;
+
+        img {
+          height: 100%;
+          width: 75%;
+          padding: 2rem 2rem 0 2rem;
+          filter: grayscale(100%);
+          position: absolute;
+          bottom: 0;
+          left: 10%;
+        }
+      }
+
+    }
+  }
+
+  .all {
+    display: flex;
+    perspective: 10px;
+    transform: perspective(300px) rotateX(20deg);
+    will-change: perspective;
+    perspective-origin: center center;
+    transition: all 1.3s ease-out;
+    justify-content: center;
+    transform-style: preserve-3d;
+    margin-top: 1rem;
+  }
+
+  .all:hover {
+    perspective: 1000px;
+    transition: all 1.3s ease-in;
+    transform: perspective(10000px) rotateX(0deg);
+
+    .text {
+      opacity: 1;
+    }
+
+    &>div {
+      opacity: 1;
+      transition-delay: 0s;
+    }
+
+    .explainer {
+      opacity: 0;
+    }
+  }
+
+  .left,
+  .center,
+  .right,
+  .lefter,
+  .righter {
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    box-shadow: 0 0 20px 5px rgba(245, 245, 245, .4);
+    opacity: 0;
+    transition: all .3s ease;
+    transition-delay: 1s;
+    position: relative;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #121212;
+    cursor: pointer;
+    background-blend-mode: color-burn;
+
+    &:hover {
+      // box-shadow: 0 0 30px 10px rgba(245, 245, 245, .1);
+      background-color: rgba(245, 245, 245, .1);
+    }
+  }
+
+  .text {
+    transform: translateY(30px);
+    opacity: 0;
+    transition: all .3s ease;
+    bottom: 0;
+    left: 5px;
+    position: absolute;
+    will-change: transform;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(245, 245, 245, .6)
+  }
+
+  .lefter {
+    transform: translateX(-60px) translateZ(-50px) rotateY(-10deg);
+    background-image: url(../../Assets/gmpLogo.png);
+
+  }
+
+  .left {
+    transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
+
+    background-image: url(../../Assets/gcpLogo.png);
+  }
+
+  .center {
+    opacity: 1;
+    background-image: url(../../Assets/reactLogo.png);
+  }
+
+  .right {
+    transform: translateX(30px) translateZ(-25px) rotateY(5deg);
+    background-image: url(../../Assets/nodeLogo.png);
+  }
+
+  .righter {
+    transform: translateX(60px) translateZ(-50px) rotateY(10deg);
+    background-image: url(../../Assets/pythonLogo.png);
+  }
+
+  .explainer {
+    font-weight: 300;
+    font-size: 2rem;
+    color: #fff;
+    transition: all .6s ease;
+    width: 100%;
+    height: 100%;
+    background-color: #303050;
+    background-image: radial-gradient(circle at center top, #F5F5F5, #121212);
+    border-radius: 10px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, .8);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .ref {
+    background-color: #000;
+    background-image: linear-gradient(to bottom, #d80, #c00);
+    border-radius: 3px;
+    padding: 7px 10px;
+    position: absolute;
+    font-size: 16px;
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 0 3px rgba(0, 0, 0, .4);
+
+    &::first-letter {
+      font-size: 12px;
+    }
+  }
+
+}
+
+@media (max-width: 769px) {
+  .aboutMe {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    overflow-x: hidden;
+
+    &__info {
+      padding: 2rem;
+      width: 100%;
+      height: fit-content;
+      background-color: #F05454;
+      color: #121212;
+
+      &-text {
+        h1 {
+          text-align: left;
+          font-weight: 900;
+          font-size: 3rem;
+        }
+
+        p {
+          text-align: justify;
+          font-weight: 400;
+        }
+      }
+    }
+
+    &__pic {
+      width: 100%;
+      height: 50%;
+      background: #22262b;
+      position: relative;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+
+      div {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          height: 100%;
+          width: 75%;
+          padding: 2rem 2rem 0 2rem;
+          filter: grayscale(100%);
+          position: absolute;
+          bottom: 0;
+          left: 15%;
+        }
+      }
+
+    }
+  }
+}
+
+@media (max-width: 451px) {
+  .aboutMe {
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &__info {
+      padding: 1rem;
+      width: 100%;
+      height: 100%;
+      background-color: #F05454;
+      color: #121212;
+
+      &-text {
+        h1 {
+          text-align: left;
+          font-weight: 600;
+          font-size: 2rem;
+        }
+
+        p {
+          text-align: justify;
+          font-weight: 300;
+        }
+      }
+    }
+
+    &__pic {
+      width: 100%;
+      height: 20rem;
+      position: relative;
+      background: #22262b;
+
+      .react-reveal {
+
+        height: 100%;
+        width: 100%;
+        position: relative;
+
+        img {
+          height: 100%;
+          width: 75%;
+          padding: 2rem 2rem 0 2rem;
+          filter: grayscale(100%);
+          position: absolute;
+          bottom: 0;
+          left: 10%;
+        }
+      }
+    }
+  }
+
+  .all {
+    display: flex;
+    perspective: 10px;
+    transform: perspective(300px) rotateX(20deg);
+    will-change: perspective;
+    perspective-origin: center center;
+    transition: all 1.3s ease-out;
+    justify-content: center;
+    transform-style: preserve-3d;
+    padding-bottom: 1rem;
+
+  }
+
+  .all:hover {
+    perspective: 1000px;
+    transition: all 1.3s ease-in;
+    transform: perspective(10000px) rotateX(0deg);
+
+    .text {
+      opacity: 1;
+    }
+
+    &>div {
+      opacity: 1;
+      transition-delay: 0s;
+    }
+
+    .explainer {
+      opacity: 0;
+    }
+  }
+
+  .left,
+  .center,
+  .right,
+  .lefter,
+  .righter {
+    width: 50px;
+    height: 50px;
+    transform-style: preserve-3d;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    box-shadow: 0 0 20px 5px rgba(245, 245, 245, .4);
+    opacity: 0;
+    transition: all .3s ease;
+    transition-delay: 1s;
+    position: relative;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #121212;
+    cursor: pointer;
+    background-blend-mode: color-burn;
+
+    &:hover {
+      // box-shadow: 0 0 30px 10px rgba(245, 245, 245, .1);
+      background-color: rgba(245, 245, 245, .1);
+    }
+  }
+
+  .text {
+    transform: translateY(30px);
+    opacity: 0;
+    transition: all .3s ease;
+    bottom: 0;
+    left: 5px;
+
+    position: absolute;
+    will-change: transform;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(245, 245, 245, .6);
+    font-size: .7rem;
+    text-align: center;
+  }
+
+  .lefter {
+    transform: translateX(-60px) translateZ(-50px) rotateY(-10deg);
+    background-image: url(../../Assets/gmpLogo.png);
+
+  }
+
+  .left {
+    transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
+
+    background-image: url(../../Assets/gcpLogo.png);
+  }
+
+  .center {
+    opacity: 1;
+    background-image: url(../../Assets/reactLogo.png);
+  }
+
+  .right {
+    transform: translateX(30px) translateZ(-25px) rotateY(5deg);
+    background-image: url(../../Assets/nodeLogo.png);
+  }
+
+  .righter {
+    transform: translateX(60px) translateZ(-50px) rotateY(10deg);
+    background-image: url(../../Assets/pythonLogo.png);
+  }
+
+  .explainer {
+    font-weight: 300;
+    font-size: 1rem;
+    color: #fff;
+    transition: all .6s ease;
+    width: 100%;
+    height: 100%;
+    background-color: #303050;
+    background-image: radial-gradient(circle at center top, #F5F5F5, #121212);
+    border-radius: 10px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, .8);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .ref {
+    background-color: #000;
+    background-image: linear-gradient(to bottom, #d80, #c00);
+    border-radius: 3px;
+    padding: 7px 10px;
+    position: absolute;
+    font-size: 16px;
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 0 3px rgba(0, 0, 0, .4);
+
+    &::first-letter {
+      font-size: 12px;
+    }
+  }
+
+}

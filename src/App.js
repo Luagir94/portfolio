@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import Routing from './Routing';
+import { PortfolioProvider } from './Context/PortfolioContext';
+import { NotificationsProvider } from '@mantine/notifications';
+import ReactGA from "react-ga4";
+import TagManager from 'react-gtm-module'
+ 
+const tagManagerArgs = {
+    gtmId: process.env.REACT_APP_GTM_ID
+}
+ 
+TagManager.initialize(tagManagerArgs)
+ReactGA.initialize(process.env.REACT_APP_MEASUREMENT_ID)
 function App() {
   return (
+    <NotificationsProvider>
+      <PortfolioProvider>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routing/>
     </div>
+    </PortfolioProvider>
+    </NotificationsProvider>
   );
 }
 

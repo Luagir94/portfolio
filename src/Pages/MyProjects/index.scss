@@ -1,0 +1,89 @@
+.myProjects{
+    height: 92%;
+    width: 100%;
+    position: relative;
+    overflow-y: hidden;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-image: url(../../Assets/bg3.svg);
+    background-size: cover;
+    color: #F5F5F5;
+    .carouselImg{
+        border-radius: 1rem;
+        border: 2px solid #F05454;
+    }
+    &__conteiner{
+
+      width: 100%;
+      height: fit-content;
+      &-mobile{
+          div{
+              width: 100%;
+
+          }
+      }
+    }
+    h1{
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 1361px){
+    .myProjects{
+        height: 92%;
+        width: 100%;
+        position: relative;
+        overflow-y: hidden;
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-image: url(../../Assets/bg3.svg);
+        background-size: cover;
+        color: #F5F5F5;
+        .carouselImg{
+            border-radius: 1rem;
+            border: 2px solid #F05454;
+        }
+        &__conteiner{
+    
+          width: 100%;
+          height: fit-content;
+        }
+        h1{
+            font-size: 4rem;
+            margin-top: 10%;
+        }
+    }
+
+
+
+}
+
+@media (max-width: 769px){
+    .myProjects{
+        height: 92%;
+        width: 100%;
+        position: relative;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        &__conteiner{
+            height: inherit;
+        }
+    .myProjects__conteiner-mobile{
+        height: inherit;
+        div{
+            img{
+                width: 90%;
+            }
+        }
+    }
+    }
+
+
+}

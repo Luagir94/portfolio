@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
 .App-logo {
@@ -12,7 +14,7 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -35,4 +37,51 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
+  box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+  width: 5px;
+  /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(188, 188, 188, 0.74);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #fafafa;
+  /* color of the scroll thumb */
+  
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
+  border: 1px solid #fafafa;
+  /* creates padding around scroll thumb */
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: #F05454 solid 1px;
+  background-color: transparent;
+  color: #F05454;
+  border: 1px solid #F05454;
+  -webkit-text-fill-color: #F05454  ;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
