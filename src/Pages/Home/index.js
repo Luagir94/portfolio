@@ -4,7 +4,7 @@ import Typewriter from 'typewriter-effect';
 import Fade from 'react-reveal/Fade';
 const Home = () => {
   return (
-    <div className='home'>
+    <main className='home'>
       <div className='home__content'>
       <div class="area" >
             <ul class="circles">
@@ -23,6 +23,7 @@ const Home = () => {
     <Fade top>
         <div className='home__content-presentation'>
         <h1>Luciano Giraudi</h1>
+        <h2>'Front-End Developer', 'Back-End Developer' , 'Data & Analytics'</h2>
         <Typewriter
   options={{
     strings: ['Front-End Developer', 'Back-End Developer' , 'Data & Analytics'],
@@ -213,7 +214,7 @@ const Home = () => {
       
 
 
-    </div>
+    </main>
   )
 }
 

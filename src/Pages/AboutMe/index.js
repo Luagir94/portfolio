@@ -18,7 +18,7 @@ const AboutMe = () => {
 
 
   return (
-    <div className='aboutMe'>
+    <main className='aboutMe'>
       {screenW < 769
         ?
         <div className='aboutMe__pic'>
@@ -35,18 +35,19 @@ const AboutMe = () => {
               About Me
             </h1>
 
-            <p >
-              Bienvenidxs! Me llamo Luciano Giraudi, me dicen Lucho, tengo {myAge} años.
+            <h2>Bienvenidxs! Me llamo Luciano Giraudi, me dicen Lucho, tengo {myAge} años.</h2>
+
+              <p >
+              Apasionado por el gaming, comics, el manga y anime entre otros.
               <br />
-              Apasionado por el gaming, comics, el manga y anime entre otro siempre estuve
-              interesado por la informatica,npm install react-gtm-module --save decidi encaminarme en el mundo de la programacion arrancando mi camino
+              Siempre estuve interesado por la informatica, decidí encaminarme en el mundo de la programacion arrancando mi camino
               como Front-End Developer y luego como Back-End Developer para completar el MERN stack.
               <br />
-              Trabajando en una agencia de medios digitales tambien adquiri conocimiento en plataformas de Google
+              Trabajando en una agencia de medios digitales tambien adquirí conocimiento en plataformas de Google
               como Google Analytics, Google Tag Manager, Google Optimize en entre otros.
               <br />
-              Mi objetivo es seguir aprendiendo todos los dias y seguir profesionalizandome para incrementar mi experiencia
-              y abrir nuevos caminos en este rumbo que tome
+              Mi objetivo es seguir aprendiendo todos los días y seguir profesionalizandome para incrementar mi experiencia
+              y abrir nuevos caminos en este rumbo que tomé.
 
             </p>
 
@@ -91,7 +92,7 @@ const AboutMe = () => {
       }
 
 
-    </div>
+    </main>
   )
 }
 

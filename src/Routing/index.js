@@ -9,7 +9,7 @@ import Home from '../Pages/Home';
 import MyProjects from '../Pages/MyProjects';
 import AboutMe from '../Pages/AboutMe'
 import Contact from '../Pages/Contact'
-import { Loader } from '@mantine/core';
+import Footer from '../Components/Footer';
 
 import PortfolioContext from '../Context/PortfolioContext';
 const Rutas = [{
@@ -43,7 +43,7 @@ const Rutas = [{
 
 
 const Routing = () => {
-    const{} = useContext(PortfolioContext)
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth)
     return (
         <>
 
@@ -64,7 +64,8 @@ const Routing = () => {
                 }
                 
             </Routes>
-
+            { (screenWidth <= 768 ) &&
+            <Footer/>}
 
     </Router>
 
