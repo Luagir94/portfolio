@@ -24,6 +24,11 @@ const Home = () => {
           <div className='home__content-presentation'>
             <h1>Luciano Giraudi</h1>
             <h2>'Front-End Developer', 'Back-End Developer' , 'Data & Analytics'</h2>
+            <span
+                style={{
+                  display: "inline-block",
+                }}
+              >
             <Typewriter
               options={{
                 strings: ['Front-End Developer', 'Back-End Developer', 'Data & Analytics'],
@@ -31,7 +36,7 @@ const Home = () => {
                 loop: true,
               }}
             />
-
+</span>
           </div>
         </Fade>
       </div>

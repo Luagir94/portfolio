@@ -8,7 +8,7 @@ const Contact = () => {
   const [form, setForm] = useState([]);
   const [isUploading, setIsUploading] = useState(false);
   const notifications = useNotifications();
-  const { userId } = useContext(PortfolioContext);
+  const { userId, lenguage } = useContext(PortfolioContext);
   const handleInputChange = (event) => {
     setForm({
       ...form,
@@ -19,12 +19,23 @@ const Contact = () => {
   const validateMail = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/
   const cargarform = () => {
     const target_1 = `https://mi-portfolio-luciano-giraudi.herokuapp.com/api/mailing`;
-    notifications.showNotification({
-      title: 'Procesando Formulario',
-      message: `El Formulario está siendo procesado.`,
-      color: 'black',
-      autoClose: 3000,
-    })
+    
+    if (lenguage === 'en') {
+      notifications.showNotification({
+        title: 'Processing Form',
+        message: `The Form is being processed.`,
+        color: 'black',
+        autoClose: 3000,
+      })
+    } else {
+      notifications.showNotification({
+        title: 'Procesando Formulario',
+        message: `El Formulario está siendo procesado.`,
+        color: 'black',
+        autoClose: 3000,
+      })
+    }
+
     const filled = []
     for (const [key, value] of Object.entries(form)) {
       if (key !== 'phone') {
@@ -64,23 +75,43 @@ const Contact = () => {
 
         setIsUploading(false)
       } else {
-        notifications.showNotification({
-          title: 'Email Invalido',
-          message: `Pusiste un formato invalido de Email.`,
-          color: 'black',
-          autoClose: 3000,
-        })
+        if (lenguage === 'en') {
+          notifications.showNotification({
+            title: 'Invalid Email',
+            message: `You put an invalid Email format.`,
+            color: 'black',
+            autoClose: 3000,
+          })
+        } else {
+          notifications.showNotification({
+            title: 'Email Invalido',
+            message: `Pusiste un formato invalido de Email.`,
+            color: 'black',
+            autoClose: 3000,
+          })
+        }
+
       }
 
 
 
     } else {
-      notifications.showNotification({
-        title: 'Faltan  datos!!',
-        message: `Faltan rellenar datos!`,
-        color: 'black',
-        autoClose: 3000,
-      })
+      if (lenguage === 'en') {
+        notifications.showNotification({
+          title: 'Missing data!!',
+          message: `Fill required fieldset!`,
+          color: 'black',
+          autoClose: 3000,
+        })
+      } else {
+        notifications.showNotification({
+          title: 'Faltan  datos!!',
+          message: `Faltan rellenar datos!`,
+          color: 'black',
+          autoClose: 3000,
+        })
+      }
+
     }
 
   }
@@ -89,11 +120,11 @@ const Contact = () => {
       <Fade bottom>
         <div>
           <div className='contact__div'>
-            <h1>Contacto</h1>
-            <h2>Si deseas contactarte conmigo envia el siguiente formulario</h2>
+            <h1>{lenguage === 'en' ? `Contact` :`Contacto`}</h1>
+            <h2>{lenguage === 'en' ? `If you want to contact me, fill the next form` :`Si deseas contactarte conmigo, completa el siguiente formulario`}</h2>
             <form className="contact__form" >
               <div className="contact__form-div">
-                <label for="nombreApellido" className="text-start" >* Nombre:</label>
+                <label for="nombreApellido" className="text-start" >{lenguage === 'en' ? `*Name:` :`* Nombre:`}</label>
                 <input className="contact__form-div-input" type="text" name='name' required id="nombreApellido" onChange={handleInputChange} />
               </div>
               <div className="contact__form-div">
@@ -101,16 +132,16 @@ const Contact = () => {
                 <input className="contact__form-div-input" type="email" name='email' required id="email" onChange={handleInputChange} />
               </div>
               <div className="contact__form-div">
-                <label for="num ">Telefono:</label>
+                <label for="num ">{lenguage === 'en' ? `Phone:` :`Telefono:`}</label>
                 <input className="contact__form-div-input" type="text" id="num" name='phone' onChange={handleInputChange} />
               </div>
               <div className="contact__form-msg">
-                <label for="msj " id='msjLabel'>* Mensaje:   </label>
+                <label for="msj " id='msjLabel'>{lenguage === 'en' ? `* Message:` :`* Mensaje:`}</label>
                 <textarea className="form-control inputtext inputmensaje" id="msj" name='msg' onChange={handleInputChange}></textarea>
               </div>
 
             </form>
-            {!isUploading ? <button className="btn btn-primary btn-lg btn-block" id="buttoncontact" onClick={() => cargarform()}>Enviar</button>
+            {!isUploading ? <button className="btn btn-primary btn-lg btn-block" id="buttoncontact" onClick={() => cargarform()}>{lenguage === 'en' ? `Send` :`Enviar`}</button>
               : <Loader color="#F05454" size="sm" />
             }
 

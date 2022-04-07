@@ -5,7 +5,7 @@ import { v4 as uuid } from 'uuid'
 
 const PortfolioContext = createContext()
 const PortfolioProvider = ({ children }) => {
-
+const [lenguage, setLenguage] = useState('en');
     const [userIdValidation, setUserIdValidation] = useState(localStorage.getItem('userID'));
     const [userId, setUserId] = useState(undefined);
 
@@ -35,7 +35,7 @@ const PortfolioProvider = ({ children }) => {
     }, [userId]);
 
 
-    return (<PortfolioContext.Provider value={{ userId, setUserId }}>{children}</PortfolioContext.Provider>)
+    return (<PortfolioContext.Provider value={{ userId, setUserId , lenguage, setLenguage}}>{children}</PortfolioContext.Provider>)
 }
 
 export { PortfolioProvider }

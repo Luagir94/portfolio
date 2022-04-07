@@ -5,6 +5,7 @@ import { Home, Folders, User, Mail, BrandLinkedin, BrandTwitter, BrandGithub, Me
 import Fade from 'react-reveal/Fade';
 import resume from '../../Assets/cvLucianoGiraudi.pdf'
 import PortfolioContext from '../../Context/PortfolioContext';
+import Flag from 'react-world-flags'
 const NavBar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth)
@@ -13,7 +14,7 @@ const NavBar = () => {
   const [toggle, setToggle] = useState(false);
   const [isActive, setIsActive] = useState(false);
 
-  const { userId } = useContext(PortfolioContext);
+  const { userId, setLenguage } = useContext(PortfolioContext);
   const toggleNav = () => {
     if (!toggle) {
       setToggle(true)
@@ -57,11 +58,16 @@ const NavBar = () => {
 
           <nav className='navBar__nav'>
             <ol className='navBar__nav-list'>
+            <Flag code="es" height="25"  width='50' onClick={() => setLenguage('es')}/>
+              <Flag code="gb" height="25" width='40' onClick={() => setLenguage('en')} />
               <li className='navBar__nav-list-item'><Link className='navBar__nav-list-item-link' title='home' to={`/`}><Home size={48} strokeWidth={2} color={'#F5F5F5'} />Home</Link></li>
               <li className='navBar__nav-list-item'><Link className='navBar__nav-list-item-link' title='proyects' to={`/projects`}><Folders size={48} strokeWidth={2} color={'#F5F5F5'} />My Projects</Link></li>
               <li className='navBar__nav-list-item'><Link className='navBar__nav-list-item-link' title='about me' to={`/aboutMe`}><User size={48} strokeWidth={2} color={'#F5F5F5'} />About Me</Link></li>
               <li className='navBar__nav-list-item'><Link className='navBar__nav-list-item-link' title='contact' to={`/contact`}><Mail size={48} strokeWidth={2} color={'#F5F5F5'} />Contact</Link></li>
               <li className='navBar__nav-list-item'><a className='navBar__nav-list-item-link' title='resume' href={resume} download onClick={() => window.dataLayer.push({ 'event': 'descargaCV', 'userId': userId })}><FileDownload size={48} strokeWidth={2} color={'#F5F5F5'} />Download CV</a></li>
+              
+              
+              
             </ol>
           </nav>
 
@@ -70,9 +76,9 @@ const NavBar = () => {
 
             (<nav className='navBar__social'>
               <ol className='navBar__social-list'>
-                <li className='navBar__social-list-item'><a className='navBar__social-list-item-link' title='linkedin' target={`_blank`} href="https://www.linkedin.com/feed/" onClick={() => window.dataLayer.push({ 'event': 'visitaLinkedinHeader', 'userId': userId })}><BrandLinkedin size={48} strokeWidth={2} color={'#F5F5F5'} />LinkedIn</a></li>
+                <li className='navBar__social-list-item'><a className='navBar__social-list-item-link' title='linkedin' target={`_blank`} href="https://www.linkedin.com/in/lucianogiraudi/" onClick={() => window.dataLayer.push({ 'event': 'visitaLinkedinHeader', 'userId': userId })}><BrandLinkedin size={48} strokeWidth={2} color={'#F5F5F5'} />LinkedIn</a></li>
                 <li className='navBar__social-list-item'><a className='navBar__social-list-item-link' title='github' target={`_blank`} href="https://github.com/Luagir94" onClick={() => window.dataLayer.push({ 'event': 'visitaGitHubHeader', 'userId': userId })}>< BrandGithub size={48} strokeWidth={2} color={'#F5F5F5'} />GitHub</a></li>
-                <li className='navBar__social-list-item'><a className='navBar__social-list-item-link' title='twitter' target={`_blank`} href="https://twitter.com/home" onClick={() => window.dataLayer.push({ 'event': 'visitaTwitterHeader', 'userId': userId })}><  BrandTwitter size={48} strokeWidth={2} color={'#F5F5F5'} />Twitter</a></li>
+                <li className='navBar__social-list-item'><a className='navBar__social-list-item-link' title='twitter' target={`_blank`} href="https://twitter.com/LuagirDev" onClick={() => window.dataLayer.push({ 'event': 'visitaTwitterHeader', 'userId': userId })}><  BrandTwitter size={48} strokeWidth={2} color={'#F5F5F5'} />Twitter</a></li>
 
               </ol>
             </nav>)}
@@ -88,6 +94,9 @@ const NavBar = () => {
               <li className='navBar__nav-list-item'><Link className='navBar__nav-list-item-link' title='about me' to={`/aboutMe`}><User size={48} strokeWidth={2} color={'#F5F5F5'} />About Me</Link></li>
               <li className='navBar__nav-list-item'><Link className='navBar__nav-list-item-link' title='contact' to={`/contact`}><Mail size={48} strokeWidth={2} color={'#F5F5F5'} />Contact</Link></li>
               <li className='navBar__nav-list-item'><a className='navBar__nav-list-item-link' title='resume' href={resume} download><FileDownload size={48} strokeWidth={2} color={'#F5F5F5'} />Download CV</a></li>
+              <li className='flagsDiv'><Flag code="es" height="25"  width='60' onClick={() => setLenguage('es')}/>
+              <Flag code="gb" height="25" width='40' onClick={() => setLenguage('en')} /></li>
+              
             </ol>
           </nav>
 

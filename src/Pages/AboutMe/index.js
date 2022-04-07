@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import CustomImg from '../../Components/Imgs/customImg'
 import IMAGES from '../../Assets'
 import './index.scss'
 import Fade from 'react-reveal/Fade';
-import { BrandHtml5, BrandSass, BrandJavascript, BrandReactNative, BrandFirebase, Api } from 'tabler-icons-react';
+import PortfolioContext from '../../Context/PortfolioContext';
 const AboutMe = () => {
   const [myAge, setMyAge] = useState('');
   const [screenW, setScreenW] = useState(document.documentElement.clientWidth);
   const nacimiento = new Date('1994/2/11')
+  const {lenguage} = useContext(PortfolioContext);
   const hoy = new Date()
   useEffect(() => {
 
@@ -30,29 +31,49 @@ const AboutMe = () => {
       }
       <div className='aboutMe__info'>
         <div className='aboutMe__info-text'>
-          <Fade right>
-            <h1 >
-              About Me
-            </h1>
-
-            <h2>Bienvenidxs! Me llamo Luciano Giraudi, me dicen Lucho, tengo {myAge} años.</h2>
-
-            <p >
-              Apasionado por el gaming, comics, el manga y anime entre otros.
-              <br />
-              Siempre estuve interesado por la informatica, decidí encaminarme en el mundo de la programacion arrancando mi camino
-              como Front-End Developer y luego como Back-End Developer para completar el MERN stack.
-              <br />
-              Trabajando en una agencia de medios digitales tambien adquirí conocimiento en plataformas de Google
-              como Google Analytics, Google Tag Manager, Google Optimize en entre otros.
-              <br />
-              Mi objetivo es seguir aprendiendo todos los días y seguir profesionalizandome para incrementar mi experiencia
-              y abrir nuevos caminos en este rumbo que tomé.
-
-            </p>
+{lenguage == 'en' ? 
+<Fade>
+<h1 >
+  About Me
+</h1>
+<h2>Welcome! My name is Luciano Giraudi, you can call me Lucho, I'm 28 and a fullstack dev.</h2>
+<p>
 
 
-          </Fade>
+I love gaming, comics, manga and anime.
+<br />
+I've always been into tech, so I decided to venture into development starting with frontend (React) and then backend (Node) to complete the MERN stack.
+<br />
+I'm currently working for a digital media agency with other technologies such as Google Analytics, Google Tag Manager, Google Optmize along with the frontend development and analytics of their site
+<br />
+I aim at learning more every day to increase my experience, to open up new career roads in the future
+</p>
+
+</Fade>
+:
+<Fade right>
+<h1 >
+  Sobre mi
+</h1>
+
+<h2>¡Bienvenidxs! Me llamo Luciano Giraudi, me dicen Lucho, tengo 28 años  y soy Desarrollador Full-Stack.</h2>
+
+<p>
+  Soy un apasionado por el gaming, los cómics, el manga y animé entre otros.
+  <br />
+  Siempre estuve interesado por la informática, decidí encaminarme en el mundo de la programación arrancando mi camino como Front-End Developer (React) y luego como Back-End Developer (Node) para completar el MERN stack.
+  <br />
+  Trabajando en una agencia de medios digitales también adquirí conocimiento en plataformas de Google como Google Analytics, Google Tag Manager, Google Optimize entre otros, en consecuencia estoy capacitado tanto para el desarrollo del sitio y la analítica de este.
+  <br />
+  Mi objetivo es seguir aprendiendo todos los días y seguir profesionalizándome para incrementar mi experiencia y abrir nuevos caminos en este rumbo que tomé.
+</p>
+
+
+</Fade>
+
+}
+
+
           <Fade right>
             <div>
 
