@@ -5,7 +5,7 @@ import { Home, Folders, User, Mail, BrandLinkedin, BrandTwitter, BrandGithub, Me
 import Fade from 'react-reveal/Fade';
 import resume from '../../Assets/cvLucianoGiraudi.pdf'
 import PortfolioContext from '../../Context/PortfolioContext';
-import Flag from 'react-world-flags'
+import Flag  from 'react-world-flags'
 const NavBar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth)
@@ -58,8 +58,8 @@ const NavBar = () => {
 
           <nav className='navBar__nav'>
             <ol className='navBar__nav-list'>
-            <Flag code="es" height="25"  width='50' onClick={() => setLenguage('es')}/>
-              <Flag code="gb" height="25" width='40' onClick={() => setLenguage('en')} />
+            <Flag title='esFlag' alt='esFlag' code="es" height="25"  width='50' onClick={() => setLenguage('es')}/>
+              <Flag title='gbFlag' alt='gbFlag' code="gb" height="25" width='40' onClick={() => setLenguage('en')} />
               <li className='navBar__nav-list-item'><Link className='navBar__nav-list-item-link' title='home' to={`/`}><Home size={48} strokeWidth={2} color={'#F5F5F5'} />Home</Link></li>
               <li className='navBar__nav-list-item'><Link className='navBar__nav-list-item-link' title='proyects' to={`/projects`}><Folders size={48} strokeWidth={2} color={'#F5F5F5'} />My Projects</Link></li>
               <li className='navBar__nav-list-item'><Link className='navBar__nav-list-item-link' title='about me' to={`/aboutMe`}><User size={48} strokeWidth={2} color={'#F5F5F5'} />About Me</Link></li>
@@ -94,8 +94,8 @@ const NavBar = () => {
               <li className='navBar__nav-list-item'><Link className='navBar__nav-list-item-link' title='about me' to={`/aboutMe`}><User size={48} strokeWidth={2} color={'#F5F5F5'} />About Me</Link></li>
               <li className='navBar__nav-list-item'><Link className='navBar__nav-list-item-link' title='contact' to={`/contact`}><Mail size={48} strokeWidth={2} color={'#F5F5F5'} />Contact</Link></li>
               <li className='navBar__nav-list-item'><a className='navBar__nav-list-item-link' title='resume' href={resume} download><FileDownload size={48} strokeWidth={2} color={'#F5F5F5'} />Download CV</a></li>
-              <li className='flagsDiv'><Flag code="es" height="25"  width='60' onClick={() => setLenguage('es')}/>
-              <Flag code="gb" height="25" width='40' onClick={() => setLenguage('en')} /></li>
+              <li className='flagsDiv'><Flag title='esFlag' alt='esFlag' code="es" height="25"  width='60' onClick={() => setLenguage('es')}/>
+              <Flag title='gbFlag' alt='gbFlag' code="gb" height="25" width='40' onClick={() => setLenguage('en')} /></li>
               
             </ol>
           </nav>
