@@ -36,7 +36,7 @@ const AboutMe = () => {
 <h1 >
   About Me
 </h1>
-<h2>Welcome! My name is Luciano Giraudi, you can call me Lucho, I'm 28 and a fullstack dev.</h2>
+<h2>Welcome! My name is Luciano Giraudi, you can call me Lucho, I'm 28  years and a fullstack dev.</h2>
 <p>
 
 
@@ -44,9 +44,9 @@ I love gaming, comics, manga and anime.
 <br />
 I've always been into tech, so I decided to venture into development starting with frontend (React) and then backend (Node) to complete the MERN stack.
 <br />
-I'm currently working for a digital media agency with other technologies such as Google Analytics, Google Tag Manager, Google Optmize along with the frontend development and analytics of their site
+I'm currently working for a digital media agency with other technologies such as Google Analytics, Google Tag Manager, Google Optimize along with the frontend development and analytics of their site.
 <br />
-I aim at learning more every day to increase my experience, to open up new career roads in the future
+I aim at learning more every day to increase my experience, to open up new career roads in the future.
 </p>
 
 </Fade>
