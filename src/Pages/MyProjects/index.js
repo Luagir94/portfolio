@@ -12,10 +12,11 @@ const MyProjects = () => {
 
 
   const slides = [
+    <div><a title='crypto' href="https://crypto-watcher-six.vercel.app/" target={`_blank`}><CustomImg {...IMAGES.crypto} clase="carouselImg" /></a><div><p>Used Stack:</p> <div></div><BrandReactNative size={60} strokeWidth={2} color={'#61DBFB'} /><BrandSass size={60} strokeWidth={2} color={'#cd6799'} /> <Api size={60} strokeWidth={2} color={'white'} /></div></div>,
     <div><a title='pokemonJS' href="https://luagir94.github.io/pokemonJS/" target={`_blank`}><CustomImg {...IMAGES.poke} clase="carouselImg" /></a><div></div><p>Used Stack:</p> <div><BrandHtml5 size={60} strokeWidth={2} color={'#E44D26'} />
-      <BrandJavascript size={60} strokeWidth={2} color={'#f0db4f'} /><BrandSass size={60} strokeWidth={2} color={'#cd6799'} /><Api size={60} strokeWidth={2} color={'black'} /></div></div>,
+      <BrandJavascript size={60} strokeWidth={2} color={'#f0db4f'} /><BrandSass size={60} strokeWidth={2} color={'#cd6799'} /><Api size={60} strokeWidth={2} color={'white'} /></div></div>,
     <div><a title='dunderMifflinGiraudi' href="https://luagir94.github.io/dunderMifflinGiraudi/" target={`_blank`}><CustomImg {...IMAGES.dunder} clase="carouselImg" /></a><div><p>Used Stack:</p> <div><BrandReactNative size={60} strokeWidth={2} color={'#61DBFB'} /><BrandSass size={60} strokeWidth={2} color={'#cd6799'} /><BrandFirebase size={60} strokeWidth={2} color={'orange'} /></div></div></div>,
-    <div><a title='yugiapp' href="https://luagir94.github.io/yugiapp/" target={`_blank`}><CustomImg {...IMAGES.yugi} clase="carouselImg" /></a><div><p>Used Stack:</p> <div></div><BrandReactNative size={60} strokeWidth={2} color={'#61DBFB'} /><BrandSass size={60} strokeWidth={2} color={'#cd6799'} /> <Api size={60} strokeWidth={2} color={'black'} /></div></div>,
+    <div><a title='yugiapp' href="https://luagir94.github.io/yugiapp/" target={`_blank`}><CustomImg {...IMAGES.yugi} clase="carouselImg" /></a><div><p>Used Stack:</p> <div></div><BrandReactNative size={60} strokeWidth={2} color={'#61DBFB'} /><BrandSass size={60} strokeWidth={2} color={'#cd6799'} /> <Api size={60} strokeWidth={2} color={'white'} /></div></div>,
     <div><a  title='SySRetratos' href="https://luagir94.github.io/SySRetratos/" target={`_blank`}><CustomImg {...IMAGES.sys} clase="carouselImg" /></a><div><p>Used Stack:</p> <div><BrandSass size={60} strokeWidth={2} color={'#cd6799'} />
       <BrandHtml5 size={60} strokeWidth={2} color={'#E44D26'} /></div></div></div>
   ]

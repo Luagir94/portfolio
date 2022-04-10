@@ -3,6 +3,7 @@ import dunder from './dunder.png'
 import poke from './poke.png'
 import sys from './sys.jpg'
 import yugi from './yugi.png'
+import crypto from './crypto.png'
 import waves from './waves.svg'
 const IMAGES ={
     profilePic: {
@@ -11,7 +12,10 @@ const IMAGES ={
     }, dunder: {
         name: 'dunder',
         img: dunder
-    }, poke: {
+    }, crypto: {
+        name: 'crypto',
+        img: crypto
+    },  poke: {
         name: 'poke',
         img: poke
     }, sys: {
