@@ -1,0 +1,68 @@
+{
+  "name": "mi-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@mantine/core": "^4.1.0",
+    "@mantine/dates": "^4.1.0",
+    "@mantine/dropzone": "^4.1.0",
+    "@mantine/form": "^4.1.0",
+    "@mantine/hooks": "^4.1.0",
+    "@mantine/modals": "^4.1.0",
+    "@mantine/notifications": "^4.1.0",
+    "@mantine/prism": "^4.1.0",
+    "@mantine/rte": "^4.1.0",
+    "@mantine/spotlight": "^4.1.0",
+    "@testing-library/jest-dom": "^5.16.3",
+    "@testing-library/react": "^12.1.4",
+    "@testing-library/user-event": "^13.5.0",
+    "3d-react-carousal": "^5.0.0",
+    "bootstrap": "^5.1.3",
+    "dayjs": "^1.11.0",
+    "flag-icons": "^6.2.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-ga4": "^1.4.1",
+    "react-gtm-module": "^2.0.11",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.3.1",
+    "react-reveal": "^1.2.2",
+    "react-router": "^6.2.2",
+    "react-router-dom": "^6.2.2",
+    "react-scripts": "5.0.0",
+    "react-slick": "^0.28.1",
+    "react-spring-3d-carousel": "^1.2.1",
+    "react-swipeable": "^6.2.1",
+    "react-world-flags": "^1.4.0",
+    "sass": "^1.49.9",
+    "slick-carousel": "^1.8.1",
+    "tabler-icons-react": "^1.42.0",
+    "typewriter-effect": "^2.18.2",
+    "uuidv4": "^6.2.13",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
