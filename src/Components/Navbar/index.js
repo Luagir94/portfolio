@@ -10,10 +10,6 @@ const NavBar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth)
   const [orientation, setOrientation] = useState('portrait');
-<<<<<<< HEAD
-=======
-  const [show, setShow] = useState(false);
->>>>>>> 8cb589f7b318e446d3931b9852509be4391d6b14
   const [toggle, setToggle] = useState(false);
   const [isActive, setIsActive] = useState(false);
 
@@ -54,13 +50,10 @@ const NavBar = () => {
   }, [])
 
 
-<<<<<<< HEAD
 useEffect(() => {
   screenWidth <= 768 ? setToggleMenu(false) : setToggleMenu(false)
 }, [screenWidth]);
 
-=======
->>>>>>> 8cb589f7b318e446d3931b9852509be4391d6b14
   return (<>
     <header className='navBar'>
       {(screenWidth > 768) && (
