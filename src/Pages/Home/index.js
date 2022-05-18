@@ -2,6 +2,7 @@ import React from 'react'
 import './index.scss'
 import Typewriter from 'typewriter-effect';
 import Fade from 'react-reveal/Fade';
+<<<<<<< HEAD
 import {Helmet} from "react-helmet";
 const Home = () => {
   return (<>
@@ -13,6 +14,10 @@ const Home = () => {
         <meta property="og:url" content="https://lucianogiraudi.com/contact"/>
         <meta property="og:image" content="https://pbs.twimg.com/profile_images/1520939333485838337/7ED4V9hF_400x400.png"/>
     </Helmet>
+=======
+const Home = () => {
+  return (
+>>>>>>> 8cb589f7b318e446d3931b9852509be4391d6b14
     <main className='home'>
       <div className='home__content'>
         <div class="area" >
@@ -229,7 +234,10 @@ const Home = () => {
 
 
     </main>
+<<<<<<< HEAD
     </>
+=======
+>>>>>>> 8cb589f7b318e446d3931b9852509be4391d6b14
   )
 }
 

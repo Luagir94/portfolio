@@ -176,6 +176,7 @@
   }
 }
 
+<<<<<<< HEAD
 @media (max-width: 1550px) {
   .aboutMe {
     &__info{
@@ -186,6 +187,9 @@
     }
   }
 }
+=======
+
+>>>>>>> 8cb589f7b318e446d3931b9852509be4391d6b14
 @media (max-width: 1367px) {
 
   .aboutMe {
@@ -380,11 +384,18 @@
   .aboutMe {
     width: 100%;
     display: flex;
+<<<<<<< HEAD
     height: 92%;
     flex-wrap: wrap;
     overflow: auto;
     overflow-x: hidden;
    
+=======
+    flex-wrap: wrap;
+    overflow: auto;
+    overflow-x: hidden;
+
+>>>>>>> 8cb589f7b318e446d3931b9852509be4391d6b14
     &__info {
       padding: 2rem;
       width: 100%;
@@ -406,7 +417,10 @@
           text-align: justify;
           font-weight: 400;
         }
+<<<<<<< HEAD
       
+=======
+>>>>>>> 8cb589f7b318e446d3931b9852509be4391d6b14
       }
     }
 
@@ -429,13 +443,21 @@
 
         img {
           height: 100%;
+<<<<<<< HEAD
           width: 50%;
           text-align: center;
+=======
+          width: 75%;
+>>>>>>> 8cb589f7b318e446d3931b9852509be4391d6b14
           padding: 2rem 2rem 0 2rem;
           filter: grayscale(100%);
           position: absolute;
           bottom: 0;
+<<<<<<< HEAD
           left: 28%;
+=======
+          left: 15%;
+>>>>>>> 8cb589f7b318e446d3931b9852509be4391d6b14
         }
       }
 

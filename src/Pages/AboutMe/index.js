@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react'
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet';
+=======
+>>>>>>> 8cb589f7b318e446d3931b9852509be4391d6b14
 import CustomImg from '../../Components/Imgs/customImg'
 import IMAGES from '../../Assets'
 import './index.scss'
@@ -20,6 +23,7 @@ const AboutMe = () => {
 
 
   return (
+<<<<<<< HEAD
     <>
      <Helmet>
         <title>About Me | Luciano Giraudi Developer</title>
@@ -29,6 +33,8 @@ const AboutMe = () => {
         <meta property="og:image" content="https://pbs.twimg.com/profile_images/1520939333485838337/7ED4V9hF_400x400.png"/>
  
     </Helmet>
+=======
+>>>>>>> 8cb589f7b318e446d3931b9852509be4391d6b14
     <main className='aboutMe'>
       {screenW < 769
         ?
@@ -124,7 +130,10 @@ I aim at learning more every day to increase my experience, to open up new caree
 
 
     </main>
+<<<<<<< HEAD
     </>
+=======
+>>>>>>> 8cb589f7b318e446d3931b9852509be4391d6b14
   )
 }
 

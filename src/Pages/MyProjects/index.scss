@@ -6,20 +6,31 @@
     display: flex;
     width: 100%;
     align-items: center;
+<<<<<<< HEAD
     justify-content: center;
+=======
+    justify-content: space-evenly;
+>>>>>>> 8cb589f7b318e446d3931b9852509be4391d6b14
     flex-direction: column;
     background-image: url(../../Assets/bg3.svg);
     background-size: cover;
     color: #F5F5F5;
+<<<<<<< HEAD
     overflow: hidden;
     .cardImg{
         border-radius: 1rem;
         width: 100%;
        height: 90%;
+=======
+    .carouselImg{
+        border-radius: 1rem;
+        border: 2px solid #F05454;
+>>>>>>> 8cb589f7b318e446d3931b9852509be4391d6b14
     }
     &__conteiner{
 
       width: 100%;
+<<<<<<< HEAD
       height: 80% !important;
       height: fit-content;
       display: flex;
@@ -62,6 +73,9 @@
             }
         }
       }
+=======
+      height: fit-content;
+>>>>>>> 8cb589f7b318e446d3931b9852509be4391d6b14
       &-mobile{
           div{
               width: 100%;
@@ -96,6 +110,7 @@
     
           width: 100%;
           height: fit-content;
+<<<<<<< HEAD
           &-cards{
 
             font-size: .7rem;
@@ -109,6 +124,12 @@
         }
         h1{
             font-size: 4rem;
+=======
+        }
+        h1{
+            font-size: 4rem;
+            margin-top: 10%;
+>>>>>>> 8cb589f7b318e446d3931b9852509be4391d6b14
         }
     }
 
@@ -118,12 +139,17 @@
 
 @media (max-width: 769px){
     .myProjects{
+<<<<<<< HEAD
         height: fit-content;
+=======
+        height: 92%;
+>>>>>>> 8cb589f7b318e446d3931b9852509be4391d6b14
         width: 100%;
         position: relative;
         overflow-y: auto;
         display: flex;
         flex-direction: column;
+<<<<<<< HEAD
        
         &__conteiner{
             height: inherit;
@@ -132,6 +158,10 @@
                 width: 100%;
                 font-size: 1rem;
             }
+=======
+        &__conteiner{
+            height: inherit;
+>>>>>>> 8cb589f7b318e446d3931b9852509be4391d6b14
         }
     .myProjects__conteiner-mobile{
         height: inherit;

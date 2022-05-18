@@ -1,11 +1,16 @@
 import React, { useState, useContext, useEffect } from 'react'
 import './index.scss'
+<<<<<<< HEAD
 import Cards from '../../Components/Cards';
+=======
+import { Carousel } from '../../Components/Carousel';
+>>>>>>> 8cb589f7b318e446d3931b9852509be4391d6b14
 import PortfolioContext from '../../Context/PortfolioContext';
 import IMAGES from '../../Assets';
 import CustomImg from '../../Components/Imgs/customImg';
 import { BrandHtml5, BrandSass, BrandJavascript, BrandReactNative, BrandFirebase, Api } from 'tabler-icons-react';
 import Fade from 'react-reveal/Fade';
+<<<<<<< HEAD
 import {Helmet} from "react-helmet";
 import Footer from '../../Components/Footer';
 const MyProjects = () => {
@@ -81,12 +86,54 @@ const MyProjects = () => {
 
         
 
+=======
+const MyProjects = () => {
+
+  const [screenW, setScreenW] = useState(document.documentElement.clientWidth);
+
+
+  const slides = [
+    <div><a title='crypto' href="https://crypto-watcher-six.vercel.app/" target={`_blank`}><CustomImg {...IMAGES.crypto} clase="carouselImg" /></a><div><p>Used Stack:</p> <div></div><BrandReactNative size={60} strokeWidth={2} color={'#61DBFB'} /><BrandSass size={60} strokeWidth={2} color={'#cd6799'} /> <Api size={60} strokeWidth={2} color={'white'} /></div></div>,
+    <div><a title='pokemonJS' href="https://luagir94.github.io/pokemonJS/" target={`_blank`}><CustomImg {...IMAGES.poke} clase="carouselImg" /></a><div></div><p>Used Stack:</p> <div><BrandHtml5 size={60} strokeWidth={2} color={'#E44D26'} />
+      <BrandJavascript size={60} strokeWidth={2} color={'#f0db4f'} /><BrandSass size={60} strokeWidth={2} color={'#cd6799'} /><Api size={60} strokeWidth={2} color={'white'} /></div></div>,
+    <div><a title='dunderMifflinGiraudi' href="https://luagir94.github.io/dunderMifflinGiraudi/" target={`_blank`}><CustomImg {...IMAGES.dunder} clase="carouselImg" /></a><div><p>Used Stack:</p> <div><BrandReactNative size={60} strokeWidth={2} color={'#61DBFB'} /><BrandSass size={60} strokeWidth={2} color={'#cd6799'} /><BrandFirebase size={60} strokeWidth={2} color={'orange'} /></div></div></div>,
+    <div><a title='yugiapp' href="https://luagir94.github.io/yugiapp/" target={`_blank`}><CustomImg {...IMAGES.yugi} clase="carouselImg" /></a><div><p>Used Stack:</p> <div></div><BrandReactNative size={60} strokeWidth={2} color={'#61DBFB'} /><BrandSass size={60} strokeWidth={2} color={'#cd6799'} /> <Api size={60} strokeWidth={2} color={'white'} /></div></div>,
+    <div><a  title='SySRetratos' href="https://luagir94.github.io/SySRetratos/" target={`_blank`}><CustomImg {...IMAGES.sys} clase="carouselImg" /></a><div><p>Used Stack:</p> <div><BrandSass size={60} strokeWidth={2} color={'#cd6799'} />
+      <BrandHtml5 size={60} strokeWidth={2} color={'#E44D26'} /></div></div></div>
+  ]
+
+
+  return (
+    <main className='myProjects'>
+      <Fade right>
+      <h1>My Projects</h1>
+      </Fade>
+      <div className='myProjects__conteiner'>
+        { screenW >768 ? <Carousel slides={slides} autoplay={false} interval={1000} arrows={true} /> :
+
+        <div className='myProjects__conteiner-mobile'>
+
+          {
+            <Fade right>
+          {slides}
+          </Fade>
+          }
+        </div>
+
+
+        }
+      
+      </div>
+>>>>>>> 8cb589f7b318e446d3931b9852509be4391d6b14
 
      
 
 
     </main>
+<<<<<<< HEAD
     </>
+=======
+>>>>>>> 8cb589f7b318e446d3931b9852509be4391d6b14
   )
 }
 

@@ -2,8 +2,11 @@
   text-align: center;
   height: 100vh;
   overflow-x: hidden;
+<<<<<<< HEAD
   display: flex;
   flex-direction: column;
+=======
+>>>>>>> 8cb589f7b318e446d3931b9852509be4391d6b14
 }
 
 .App-logo {
@@ -53,13 +56,19 @@
 }
 *::-webkit-scrollbar {
   width: 5px;
+<<<<<<< HEAD
   display: none;
+=======
+>>>>>>> 8cb589f7b318e446d3931b9852509be4391d6b14
   /* width of the entire scrollbar */
 }
 
 *::-webkit-scrollbar-track {
   background: rgba(188, 188, 188, 0.74);
+<<<<<<< HEAD
   display: none;
+=======
+>>>>>>> 8cb589f7b318e446d3931b9852509be4391d6b14
 }
 
 *::-webkit-scrollbar-thumb {
@@ -70,7 +79,10 @@
   /* roundness of the scroll thumb */
   border: 1px solid #fafafa;
   /* creates padding around scroll thumb */
+<<<<<<< HEAD
   display: none;
+=======
+>>>>>>> 8cb589f7b318e446d3931b9852509be4391d6b14
 }
 
 input:-webkit-autofill,
