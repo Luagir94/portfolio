@@ -4,10 +4,7 @@ import './index.scss'
 import Fade from 'react-reveal/Fade';
 import { Loader } from '@mantine/core';
 import { useNotifications } from '@mantine/notifications';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet';
-=======
->>>>>>> 8cb589f7b318e446d3931b9852509be4391d6b14
 const Contact = () => {
   const [form, setForm] = useState([]);
   const [isUploading, setIsUploading] = useState(false);
@@ -120,7 +117,6 @@ const Contact = () => {
 
   }
   return (
-<<<<<<< HEAD
     <>
     <Helmet>
         <title>Contact | Luciano Giraudi Developer</title>
@@ -131,8 +127,6 @@ const Contact = () => {
   
     </Helmet>
     
-=======
->>>>>>> 8cb589f7b318e446d3931b9852509be4391d6b14
     <main className='contact'>
       <Fade bottom>
         <div>
@@ -168,10 +162,7 @@ const Contact = () => {
 
 
     </main>
-<<<<<<< HEAD
     </>
-=======
->>>>>>> 8cb589f7b318e446d3931b9852509be4391d6b14
   )
 }
 
