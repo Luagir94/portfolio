@@ -3,22 +3,21 @@ import PortfolioContext from '../../Context/PortfolioContext'
 
 const Cards = ({props}) => {
     const{lenguage} =useContext(PortfolioContext)
-  return (
-    <div className='myProjects__conteiner-cards'>
-        <div className='myProjects__conteiner-cards-img'>
-        {props.img}
-        </div>
-        <div className='myProjects__conteiner-cards-data'>
-            <p>Name: {props.name}</p>
-            <p>Stack:{props.stack}</p>
-            <p>Repo: <a href={props.gitHub} target='_blank'>Link</a></p>
-            <p>Deploy: <a href={props.url} target='_blank'>Link</a></p>
-            <p>Desc: { lenguage ==='en' ? props.descEn : props.descEs}</p>
-            
-        
-        </div>
-        
-    </div>
+  return (<>
+  <figure class="image-block">
+	<h2>{props.name}</h2>
+	{props.img}
+	<figcaption>
+		<h3>
+    {props.name}
+		</h3>
+		<p>Desc: { lenguage ==='en' ? props.descEn : props.descEs}</p>
+    <p>Stack: {props.stack}</p>
+    <p>Repo: <a href={props.gitHub}  title={props.name}  target='_blank'>Link</a></p>
+    <p>Deploy: <a href={props.url} title={props.name} target='_blank'>Link</a></p>
+	</figcaption>
+</figure>
+    </>
   )
 }
 

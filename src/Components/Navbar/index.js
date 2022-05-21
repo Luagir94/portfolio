@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect, useContext,useCallback } from 'react'
 import './index.scss'
 import { Link } from 'react-router-dom'
 import { Home, Folders, User, Mail, BrandLinkedin, BrandTwitter, BrandGithub, Menu2, FileDownload } from 'tabler-icons-react';
@@ -12,7 +12,11 @@ const NavBar = () => {
   const [orientation, setOrientation] = useState('portrait');
   const [toggle, setToggle] = useState(false);
   const [isActive, setIsActive] = useState(false);
+  const handleWindowResize = useCallback(event => {
 
+    setScreenWidth(window.innerWidth);
+
+}, []); 
   const { userId, setLenguage , lenguage } = useContext(PortfolioContext);
   const toggleNav = () => {
     if (!toggle) {
@@ -35,28 +39,34 @@ const NavBar = () => {
 
 
   }
-  const handleRotation = () => {
-    setOrientation(window.matchMedia)
-  }
+  
   useEffect(() => {
+    window.addEventListener('resize', handleWindowResize);
 
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, [handleWindowResize]);
+
+  useEffect(() => {
     const changeWidth = () => {
       setScreenWidth(window.innerWidth);
     }
-    handleRotation()
     return () => {
       window.removeEventListener('resize', changeWidth)
     }
-  }, [])
+  }, [window.innerWidth])
+
 
 
 useEffect(() => {
-  screenWidth <= 768 ? setToggleMenu(false) : setToggleMenu(false)
+  screenWidth <= 980 ? setToggleMenu(false) : setToggleMenu(true)
+  screenWidth <= 980 ? setToggle(false) : setToggle(true)
 }, [screenWidth]);
 
   return (<>
     <header className='navBar'>
-      {(screenWidth > 768) && (
+      {(screenWidth > 980) && (
         <>
 
           <nav className='navBar__nav'>
@@ -74,20 +84,17 @@ useEffect(() => {
             </ol>
           </nav>
 
-          {(screenWidth > 768) &&
-
-
+          {(screenWidth > 980) ?
             (<nav className='navBar__social'>
               <ol className='navBar__social-list'>
                 <li className='navBar__social-list-item'><a className='navBar__social-list-item-link' title='linkedin' target={`_blank`} href="https://www.linkedin.com/in/lucianogiraudi/" onClick={() => window.dataLayer.push({ 'event': 'visitaLinkedinHeader', 'userId': userId })}><BrandLinkedin size={48} strokeWidth={2} color={'#F5F5F5'} />LinkedIn</a></li>
                 <li className='navBar__social-list-item'><a className='navBar__social-list-item-link' title='github' target={`_blank`} href="https://github.com/Luagir94" onClick={() => window.dataLayer.push({ 'event': 'visitaGitHubHeader', 'userId': userId })}>< BrandGithub size={48} strokeWidth={2} color={'#F5F5F5'} />GitHub</a></li>
                 <li className='navBar__social-list-item'><a className='navBar__social-list-item-link' title='twitter' target={`_blank`} href="https://twitter.com/LuagirDev" onClick={() => window.dataLayer.push({ 'event': 'visitaTwitterHeader', 'userId': userId })}><  BrandTwitter size={48} strokeWidth={2} color={'#F5F5F5'} />Twitter</a></li>
-
               </ol>
-            </nav>)}
+            </nav>) : null}
         </>
       )}
-      {(screenWidth <= 768 && toggle) &&
+      {(screenWidth <= 980 && toggle) &&
 
         <Fade left when={toggleMenu} >
           <nav className='navBar__nav'>
@@ -105,14 +112,14 @@ useEffect(() => {
 
         </Fade>
       }
-      {(screenWidth <= 768) && (
+      {(screenWidth <= 980) ? (
         <>
           <div className={`navBar__divButton`}>
             <button onClick={toggleNav} className={`navBar__divButton-button`}><Menu2 size={40} strokeWidth={3} onClick={toggleNav} color={'#F5F5F5'} /></button>
           </div>
 
         </>
-      )}
+      ) : null}
 
     </header>
   </>

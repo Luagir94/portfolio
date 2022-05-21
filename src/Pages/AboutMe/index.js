@@ -23,7 +23,7 @@ const AboutMe = () => {
     <>
      <Helmet>
         <title>About Me | Luciano Giraudi Developer</title>
-        <meta property="og:title" content="About Me | Luciano Giraudi Developer"/>
+        <meta property="og:title" content="About Me | Luciano Giraudi - Developer"/>
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="https://lucianogiraudi.com/contact"/>
         <meta property="og:image" content="https://pbs.twimg.com/profile_images/1520939333485838337/7ED4V9hF_400x400.png"/>

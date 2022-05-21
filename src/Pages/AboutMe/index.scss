@@ -3,7 +3,10 @@
   height: 92%;
   display: flex;
   overflow: hidden;
-
+  .react-reveal {
+    height: 100%;
+    opacity: 0;
+}
   &__info {
     padding: 10rem;
     width: 50%;
@@ -16,13 +19,20 @@
         text-align: left;
         font-weight: 900;
         font-size: 3rem;
+        text-shadow: 3px 3px 1.5px #121212;
+        color: #F5F5F5;
       }
 
       p,h2 {
         text-align:justify;
-        font-weight: 400;
+        font-weight: 800;
         font-size: 1rem;
         width: 100%;
+        color: #121212;
+        
+      }
+      p{
+        font-weight: 800;
       }
     }
   }
@@ -209,7 +219,7 @@
 
         p {
           text-align: justify;
-          font-weight: 400;
+          font-weight: 800;
           font-size: 1rem;
         }
       }
@@ -228,12 +238,12 @@
 
         img {
           height: 100%;
-          width: 75%;
+          width: 100%;
           padding: 2rem 2rem 0 2rem;
           filter: grayscale(100%);
           position: absolute;
           bottom: 0;
-          left: 10%;
+          left: 0;
         }
       }
 
@@ -404,7 +414,7 @@
 
         p {
           text-align: justify;
-          font-weight: 400;
+          font-weight: 800;
         }
       
       }
@@ -468,7 +478,7 @@
         }
         p {
           text-align: justify;
-          font-weight: 300;
+          font-weight: 800;
         }
       }
     }
@@ -666,7 +676,7 @@
         }
         p {
           text-align: justify;
-          font-weight: 300;
+          font-weight: 800;
         }
       }
     }

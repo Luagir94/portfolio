@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useCallback, useState,useEffect } from 'react';
 import {
     BrowserRouter as Router,
     Routes,
@@ -44,6 +44,20 @@ const Rutas = [{
 
 const Routing = () => {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+    const handleWindowResize = useCallback(event => {
+
+        setScreenWidth(window.innerWidth);
+    
+    }, []); 
+
+    useEffect(() => {
+        window.addEventListener('resize', handleWindowResize);
+    
+        return () => {
+          window.removeEventListener('resize', handleWindowResize);
+        };
+      }, [handleWindowResize]);
+    
     return (
         <>
 

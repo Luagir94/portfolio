@@ -13,7 +13,7 @@ const MyProjects = () => {
   const [screenW, setScreenW] = useState(document.documentElement.clientWidth);
   const [proyects, setProyects] = useState([{
     name: 'Crypto-Watcher',
-    img: <CustomImg {...IMAGES.crypto} clase="cardImg" />,
+    img: <CustomImg {...IMAGES.crypto}  />,
     stack: [<BrandReactNative  strokeWidth={2} color={'#61DBFB'} />,<BrandSass  strokeWidth={2} color={'#cd6799'} /> ,<Api  strokeWidth={2} color={'white'} />],
     url: "https://crypto-watcher-six.vercel.app/",
     gitHub:"https://github.com/Luagir94/crypto-watcher",
@@ -21,7 +21,7 @@ const MyProjects = () => {
      descEn: "Cryptocurrency quotes"
   },{
     name: 'PokemonJS',
-    img: <CustomImg {...IMAGES.poke} clase="cardImg" />,
+    img: <CustomImg {...IMAGES.poke}  />,
     stack: [<BrandHtml5  strokeWidth={2} color={'#E44D26'} />,<BrandJavascript  strokeWidth={2} color={'#f0db4f'} />,<BrandSass  strokeWidth={2} color={'#cd6799'} />,<Api  strokeWidth={2} color={'white'} />],
     url: "https://luagir94.github.io/pokemonJS/",
     gitHub:"https://github.com/Luagir94/pokemonJS",
@@ -29,7 +29,7 @@ const MyProjects = () => {
      descEn: "Pokemon battle simulator. Not Responsive"
   },{
     name: 'SySRetratos',
-    img: <CustomImg {...IMAGES.sys} clase="cardImg" />,
+    img: <CustomImg {...IMAGES.sys}  />,
     stack: [<BrandSass  strokeWidth={2} color={'#cd6799'} />,<BrandHtml5  strokeWidth={2} color={'#E44D26'} />],
     url: "https://luagir94.github.io/SySRetratos/",
     gitHub:"https://github.com/Luagir94/SySRetratos",
@@ -37,7 +37,7 @@ const MyProjects = () => {
      descEn: "Handmade pet paintings"
   },{
     name: 'Dunder Mifflin',
-    img: <CustomImg {...IMAGES.dunder} clase="cardImg" />,
+    img: <CustomImg {...IMAGES.dunder}  />,
     stack: [<BrandReactNative  strokeWidth={2} color={'#61DBFB'} />,<BrandSass  strokeWidth={2} color={'#cd6799'} />,<BrandFirebase  strokeWidth={2} color={'orange'} />],
     url: "https://luagir94.github.io/dunderMifflinGiraudi/",
     gitHub:"https://luagir94.github.io/dunderMifflinGiraudi/",
@@ -45,7 +45,7 @@ const MyProjects = () => {
      descEn: "Fake e-commerce tribute to 'The Office'"
   },{
     name: 'Yugi-App',
-    img: <CustomImg {...IMAGES.yugi} clase="cardImg" />,
+    img: <CustomImg {...IMAGES.yugi}  />,
     stack: [<BrandReactNative  strokeWidth={2} color={'#61DBFB'} />,<BrandSass  strokeWidth={2} color={'#cd6799'} /> ,<Api  strokeWidth={2} color={'white'} />],
     url: "https://crypto-watcher-six.vercel.app/",
     gitHub:"https://github.com/Luagir94/crypto-watcher",
@@ -63,9 +63,9 @@ const MyProjects = () => {
   <Helmet>
         <title>My Projects | Luciano Giraudi Developer</title>
    
-        <meta property="og:title" content="My Projects | Luciano Giraudi Developer"/>
+        <meta property="og:title" content="My Projects | Luciano Giraudi - Developer"/>
         <meta property="og:type" content="website"/>
-        <meta property="og:url" content="https://lucianogiraudi.com/contact"/>
+        <meta property="og:url" content="https://lucianogiraudi.com/projects"/>
         <meta property="og:image" content="https://pbs.twimg.com/profile_images/1520939333485838337/7ED4V9hF_400x400.png"/>
     </Helmet>
   
