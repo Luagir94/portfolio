@@ -74,7 +74,7 @@ useEffect(() => {
             <Flag title='esFlag' alt='esFlag' code="es" height="25"  width='50' onClick={() => setLenguage('es')}/>
               <Flag title='gbFlag' alt='gbFlag' code="gb" height="25" width='40' onClick={() => setLenguage('en')} />
               <li className='navBar__nav-list-item'><Link className='navBar__nav-list-item-link' title='home' to={`/`}><Home size={48} strokeWidth={2} color={'#F5F5F5'} />{lenguage ==='en' ? 'Home'  : 'Inicio' }</Link></li>
-              <li className='navBar__nav-list-item'><Link className='navBar__nav-list-item-link' title='proyects' to={`/projects`}><Folders size={48} strokeWidth={2} color={'#F5F5F5'} />{lenguage ==='en' ? 'My Projects'  :'Mis Proyectos'}</Link></li>
+              <li className='navBar__nav-list-item'><Link className='navBar__nav-list-item-link' title='projects' to={`/projects`}><Folders size={48} strokeWidth={2} color={'#F5F5F5'} />{lenguage ==='en' ? 'My Projects'  :'Mis Proyectos'}</Link></li>
               <li className='navBar__nav-list-item'><Link className='navBar__nav-list-item-link' title='about me' to={`/aboutMe`}><User size={48} strokeWidth={2} color={'#F5F5F5'} />{lenguage ==='en' ? 'About Me'  :'Sobre Mi'}</Link></li>
               <li className='navBar__nav-list-item'><Link className='navBar__nav-list-item-link' title='contact' to={`/contact`}><Mail size={48} strokeWidth={2} color={'#F5F5F5'} />{lenguage ==='en' ? 'Contact'  :'Contacto'}</Link></li>
               <li className='navBar__nav-list-item'><a className='navBar__nav-list-item-link' title='resume' href={resume} download onClick={() => window.dataLayer.push({ 'event': 'descargaCV', 'userId': userId })}><FileDownload size={48} strokeWidth={2} color={'#F5F5F5'} />{lenguage ==='en' ? 'Download Resume'  :'Descargar CV'}</a></li>
@@ -99,12 +99,12 @@ useEffect(() => {
         <Fade left when={toggleMenu} >
           <nav className='navBar__nav'>
             <ol className='navBar__nav-list'>
-              <li className='navBar__nav-list-item'><Link className='navBar__nav-list-item-link' title='home' to={`/`}><Home size={48} strokeWidth={2} color={'#F5F5F5'} />{lenguage ==='en' ? 'Home'  : 'Inicio' }</Link></li>
-              <li className='navBar__nav-list-item'><Link className='navBar__nav-list-item-link' title='proejcts' to={`/projects`}><Folders size={48} strokeWidth={2} color={'#F5F5F5'} />{lenguage ==='en' ? 'My Projects'  :'Mis Proyectos'}</Link></li>
-              <li className='navBar__nav-list-item'><Link className='navBar__nav-list-item-link' title='about me' to={`/aboutMe`}><User size={48} strokeWidth={2} color={'#F5F5F5'} />{lenguage ==='en' ? 'About Me'  :'Sobre Mi'}</Link></li>
-              <li className='navBar__nav-list-item'><Link className='navBar__nav-list-item-link' title='contact' to={`/contact`}><Mail size={48} strokeWidth={2} color={'#F5F5F5'} />{lenguage ==='en' ? 'Contact'  :'Contacto'}</Link></li>
-              <li className='navBar__nav-list-item'><a className='navBar__nav-list-item-link' title='resume' href={resume} download><FileDownload size={48} strokeWidth={2} color={'#F5F5F5'} />{lenguage ==='en' ? 'Download Resume'  :'Descargar CV'}</a></li>
-              <li className='flagsDiv'><Flag title='esFlag' alt='esFlag' code="es" height="25"  width='60' onClick={() => setLenguage('es')}/>
+              <li className='navBar__nav-list-item' onClick={toggleNav}><Link className='navBar__nav-list-item-link' title='home' to={`/`}><Home size={48} strokeWidth={2} color={'#F5F5F5'} />{lenguage ==='en' ? 'Home'  : 'Inicio' }</Link></li>
+              <li className='navBar__nav-list-item' onClick={toggleNav}><Link className='navBar__nav-list-item-link' title='proejcts' to={`/projects`}><Folders size={48} strokeWidth={2} color={'#F5F5F5'} />{lenguage ==='en' ? 'My Projects'  :'Mis Proyectos'}</Link></li>
+              <li className='navBar__nav-list-item' onClick={toggleNav}><Link className='navBar__nav-list-item-link' title='about me' to={`/aboutMe`}><User size={48} strokeWidth={2} color={'#F5F5F5'} />{lenguage ==='en' ? 'About Me'  :'Sobre Mi'}</Link></li>
+              <li className='navBar__nav-list-item' onClick={toggleNav}><Link className='navBar__nav-list-item-link' title='contact' to={`/contact`}><Mail size={48} strokeWidth={2} color={'#F5F5F5'} />{lenguage ==='en' ? 'Contact'  :'Contacto'}</Link></li>
+              <li className='navBar__nav-list-item' onClick={toggleNav}><a className='navBar__nav-list-item-link' title='resume' href={resume} download><FileDownload size={48} strokeWidth={2} color={'#F5F5F5'} />{lenguage ==='en' ? 'Download Resume'  :'Descargar CV'}</a></li>
+              <li className='flagsDiv' onClick={toggleNav}><Flag title='esFlag' alt='esFlag' code="es" height="25"  width='60' onClick={() => setLenguage('es')}/>
               <Flag title='gbFlag' alt='gbFlag' code="gb" height="25" width='40' onClick={() => setLenguage('en')} /></li>
               
             </ol>

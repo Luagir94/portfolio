@@ -101,6 +101,9 @@ const Contact = () => {
     </Helmet>
     
     <main className='contact'>
+    <div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
       <Fade bottom>
         <div>
           <div className='contact__div'>

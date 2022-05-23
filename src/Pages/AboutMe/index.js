@@ -33,6 +33,7 @@ const AboutMe = () => {
       {screenW < 769
         ?
         <div className='aboutMe__pic'>
+          
           <Fade right>
             <CustomImg {...IMAGES.profilePic} clase="home__imgDiv-img" />
           </Fade>

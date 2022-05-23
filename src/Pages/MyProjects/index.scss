@@ -20,7 +20,82 @@ $lg: new-breakpoint(min-width 1024px);
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: url(../../Assets/bg3.svg);
+    background: #121212;
+    .circle{
+        position: absolute;
+        border-radius: 50%;
+        background: #F05454;
+        animation: ripple 15s infinite;
+        box-shadow: 0px 0px 1px 0px #508fb9;
+      }
+      
+      .small{
+        width: 200px;
+        height: 200px;
+        left: -100px;
+        bottom: -100px;
+      }
+      
+      .medium{
+        width: 400px;
+        height: 400px;
+        left: -200px;
+        bottom: -200px;
+      }
+      
+      .large{
+        width: 600px;
+        height: 600px;
+        left: -300px;
+        bottom: -300px;
+      }
+      
+      .xlarge{
+        width: 800px;
+        height: 800px;
+        left: -400px;
+        bottom: -400px;
+      }
+      
+      .xxlarge{
+        width: 1000px;
+        height: 1000px;
+        left: -500px;
+        bottom: -500px;
+      }
+      
+      .shade1{
+        opacity: 0.2;
+      }
+      .shade2{
+        opacity: 0.5;
+      }
+      
+      .shade3{
+        opacity: 0.7;
+      }
+      
+      .shade4{
+        opacity: 0.8;
+      }
+      
+      .shade5{
+        opacity: 0.9;
+      }
+      
+      @keyframes ripple{
+        0%{
+          transform: scale(0.8);
+        }
+        
+        50%{
+          transform: scale(1.2);
+        }
+        
+        100%{
+          transform: scale(0.8);
+        }
+      };
     background-size: cover;
     color: #F5F5F5;
     overflow: hidden;
@@ -30,7 +105,7 @@ $lg: new-breakpoint(min-width 1024px);
        height: 90%;
     }
     &__conteiner{
-
+      padding: 1rem;
       width: 100%;
       height: 80% !important;
       height: fit-content;
@@ -39,6 +114,7 @@ $lg: new-breakpoint(min-width 1024px);
       justify-content: center;
       align-items: flex-start;
       overflow-y: auto;
+      margin: auto;
       gap: 1rem;
       &-cards{
           &:hover{
@@ -99,9 +175,43 @@ $lg: new-breakpoint(min-width 1024px);
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        background-image: url(../../Assets/bg3.svg);
+        ;
         background-size: cover;
         color: #F5F5F5;
+        .small{
+            width: 100px;
+            height: 100px;
+            left: -50px;
+            bottom: -50px;
+          }
+          
+          .medium{
+            width: 200px;
+            height: 200px;
+            left: -100px;
+            bottom: -100px;
+          }
+          
+          .large{
+            width: 300px;
+            height: 300px;
+            left: -150px;
+            bottom: -150px;
+          }
+          
+          .xlarge{
+            width: 400px;
+            height: 400px;
+            left: -200px;
+            bottom: -200px;
+          }
+          
+          .xxlarge{
+            width: 500px;
+            height: 500px;
+            left: -250px;
+            bottom: -250px;
+          }
         .carouselImg{
             border-radius: 1rem;
             border: 2px solid #F05454;
@@ -135,7 +245,7 @@ $lg: new-breakpoint(min-width 1024px);
         
         width: 100%;
         position: relative;
-        overflow-y: auto;
+        overflow-y: hidden;
         display: flex;
         flex-direction: column;
        
@@ -174,9 +284,10 @@ figure {
 	position: relative;
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	width: 20rem;
+	justify-content: flex-start;
+	width: 38rem;
 	height: 20rem;
+  
 	border-radius: 10px;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
@@ -204,7 +315,7 @@ figure {
 		margin: 0;
 		padding: 0;
 		color: #F5F5F5;
-		font-size: 2.5rem;
+		font-size: 1.7rem;
 		font-weight: 800;
 		line-height: 1;
         text-transform:uppercase;

@@ -41,16 +41,16 @@ const MyProjects = () => {
     stack: [<BrandReactNative  strokeWidth={2} color={'#61DBFB'} />,<BrandSass  strokeWidth={2} color={'#cd6799'} />,<BrandFirebase  strokeWidth={2} color={'orange'} />],
     url: "https://luagir94.github.io/dunderMifflinGiraudi/",
     gitHub:"https://luagir94.github.io/dunderMifflinGiraudi/",
-    descEs:"Fake e-commerce tributo a 'The Office'", 
-     descEn: "Fake e-commerce tribute to 'The Office'"
+    descEs:"Fake e-commerce tributo a 'The Office'. No es Responsive", 
+     descEn: "Fake e-commerce tribute to 'The Office' Not Responsive"
   },{
     name: 'Yugi-App',
     img: <CustomImg {...IMAGES.yugi}  />,
     stack: [<BrandReactNative  strokeWidth={2} color={'#61DBFB'} />,<BrandSass  strokeWidth={2} color={'#cd6799'} /> ,<Api  strokeWidth={2} color={'white'} />],
-    url: "https://crypto-watcher-six.vercel.app/",
-    gitHub:"https://github.com/Luagir94/crypto-watcher",
-    descEs:"Creador de mazos", 
-    descEn: "Deck builder"
+    url: "https://luagir94.github.io/getCards",
+    gitHub:"https://github.com/Luagir94/yugiapp",
+    descEs:"Creador de mazos. No es Responsive", 
+    descEn: "Deck builder. Not Responsive"
   },
 
 
@@ -62,7 +62,6 @@ const MyProjects = () => {
   return (<>
   <Helmet>
         <title>My Projects | Luciano Giraudi Developer</title>
-   
         <meta property="og:title" content="My Projects | Luciano Giraudi - Developer"/>
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="https://lucianogiraudi.com/projects"/>
@@ -70,6 +69,13 @@ const MyProjects = () => {
     </Helmet>
   
     <main className='myProjects'>
+    <div class='ripple-background'>
+  <div class='circle xxlarge shade1'></div>
+  <div class='circle xlarge shade2'></div>
+  <div class='circle large shade3'></div>
+  <div class='circle mediun shade4'></div>
+  <div class='circle small shade5'></div>
+</div>
       <Fade right>
       <h1>{lenguage ==='en' ? 'My Projects' : 'Mis Proyectos'}</h1>
       <div className='myProjects__conteiner'>
