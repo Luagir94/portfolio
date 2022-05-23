@@ -324,7 +324,7 @@ figure {
 	img {
 		height: 100%;
 		transition: 0.25s;
-        object-fit: cover;
+        object-fit: fill;
         width: 100%;
 	}
 	figcaption {
